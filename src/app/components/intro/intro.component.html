@@ -1,0 +1,79 @@
+<div class="container-fluid">
+    <div class="text-wrapper">
+        <h1>Introduction to Observables</h1>
+
+        <div class="info-wrapper">
+            <section>
+                <div class="text-content row">
+                    <div class="col-sm-12 col-md-6">
+                        <h3>What are the Observables?</h3>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <ul>
+                            <li>Javascript objects</li>
+                            <li>They are <strong>asynchronous</strong> in nature</li>
+                            <li>Connects a Producer to a Consumer</li>
+                            <li>Observables are <strong>Lazy</strong></li>
+                            <li>Observables are <strong>cancelable</strong></li>
+                            <li>Observables provide many operators</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+            <section>
+                <div class="text-content row">
+                    <div class="col-sm-12 col-md-6">
+                        <h3>Phases of Observables</h3>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <ul>
+                            <li><strong>Creation</strong></li>
+                            <li><strong>Subscription</strong></li>
+                            <li><strong>Execution</strong></li>
+                            <li><strong>Destruction</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <hr>
+            <section>
+                <div class="text-content row">
+                    <div class="col-sm-12 col-md-6">
+                        <h3>The 3 types of values observable can deliver to subscriber are:</h3>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <pre>
+                            <code>
+                                <p>observer.next(‘hii’);//this can be multiple (more than one)</p>
+                                <p>observer.error(‘error occurs’) // this call whenever any error occus.</p>
+                                <p>Observer.complete(‘completion of delivery of all values’) // this tells the subscriptions to observable is completed. No delivery is going to take place after this statement.</p>
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </section>
+            <hr>
+            <section>
+                <div class="text-content row">
+                    <div class="col-sm-12 col-md-6">
+                        <h3>Example:</h3>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <pre>
+                            <code> observable = Rx.Observable.create((observer: any) =>{{"{"}}
+                                        setTimeout(()=>{{"{"}}
+                                            observer.next(‘Yes, somehow understandable!’)
+                                        {{"}"}}, 1000)
+                                    observer.next(‘Hi Observable’);        
+
+                                    observer.next( ‘Am I understandable?’ );{{"}"}})
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>

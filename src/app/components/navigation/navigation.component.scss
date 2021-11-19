@@ -1,0 +1,21 @@
+.nav-item {
+    margin: 0 6px;
+    list-style-type: none;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.navbar-brand {
+    margin: 0;
+    padding: 0 10px;
+    img {
+        width: 100px;
+        height: 70px;
+    }
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

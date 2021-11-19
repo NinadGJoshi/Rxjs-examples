@@ -1,0 +1,9 @@
+<div class="container">
+    <h2>Distinct Util Changed Operator Example</h2>
+    <ng-container *ngIf="(form$ | async) as form">
+        <form [formGroup]="form">
+            <input formControlName="ip-control" class="form-control">
+        </form>
+        <p>{{control$ | async}}</p>
+    </ng-container>
+</div>

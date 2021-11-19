@@ -1,0 +1,16 @@
+section {
+    display: grid;
+    place-items: center;
+    .counter-wrapper {
+        width: 275px;
+        height: 275px;
+        box-sizing: border-box;
+        border: 1px solid;
+        font-size: 100px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        display: grid;
+        place-items: center;
+        color: #FFF;
+        background-color: #000;
+    }
+}

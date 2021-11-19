@@ -1,0 +1,50 @@
+@import "../../../assets/css-vars/variables.scss";
+
+.text-wrapper {
+    margin: 20px;
+    width: 1400px;
+    border: 1px solid #859095;
+    background-color: $faint-gray-shade;
+
+    h1 {
+        text-align: center;
+        font-size: 85px;
+        margin: 40px 0;
+        font-family: $intro-heading-text;
+    }
+
+    .info-wrapper {
+        section {
+            margin: 10px 0;
+            .text-content {
+                h3 {
+                    text-align: center;
+                    vertical-align: middle;
+                    line-height: 180px;
+                }
+                ul{
+                    padding: 0;
+                    margin: 0;
+                    li {
+                        text-align: left;
+                        font-size: large;
+                        margin: 20px 0;
+                    }
+                }
+                pre {
+                    width: 98%;
+                    code {
+                        padding: 0;
+                        font-family: monospace;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+        hr {
+            border: 1px dashed black;
+            opacity: 0.25;
+        }
+    }
+}
+

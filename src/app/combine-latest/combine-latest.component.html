@@ -1,0 +1,22 @@
+<div class="container">
+    <h2>Combine Latest example person-prodcuts list</h2>
+    <table style-table>
+        <thead>
+            <th>Customer Name</th>
+            <th>Age</th>
+            <th>Product Name</th>
+            <th>Product Price</th>
+        </thead>
+        <tbody>
+            <ng-container *ngIf="(perchaseList$ | async) as perchase">
+                <tr *ngFor="let record of perchase">
+                    <td>{{record.custName}}</td>
+                    <td>{{record.custAge}}</td>
+                    <td>{{record.productName}}</td>
+                    <td>{{record.productPrice}}</td>
+                </tr>
+            </ng-container>
+            
+        </tbody>
+    </table>
+</div>

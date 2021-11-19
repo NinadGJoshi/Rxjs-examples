@@ -1,0 +1,34 @@
+{
+    "products": [
+        {
+            "productId": 1001,
+            "name": "SanDisk Cruzer Blade 32GB USB Flash Drive",
+            "price": 339
+        },
+        {
+            "productId": 1001,
+            "name": "Redmi 9 (Sporty Orange, 4GB RAM, 64GB Storage)",
+            "price": 8999
+        },
+        {
+            "productId": 1002,
+            "name": "Zodo 8. 5 inch LCD E-Writer Electronic Writing Pad/Tablet Drawing Board",
+            "price": 265
+        },
+        {
+            "productId": 1003,
+            "name": "Dr Trust (USA) Waterproof Flexible Tip Digital Thermometer",
+            "price": 300
+        },
+        {
+            "productId": 1005,
+            "name": "OnePlus Bullets Wireless Z Bass Edition (Bold Black)",
+            "price": 1999
+        },
+        {
+            "productId": 1006,
+            "name": "MMOBIEL Universal ScrewdriverToolkit with Protective Case , Black , 25 Pieces",
+            "price": 499
+        }        
+    ]
+}

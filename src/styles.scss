@@ -1,0 +1,18 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "assets/css-vars/variables.scss";
+
+th, td {
+    text-align: center;
+    font-size: large;
+    font-family: $table-content-text;
+}
+
+th {
+    background-color: $table-heading-color;
+    color: $plain-white;
+}
+
+h2 {
+    text-align: center;
+    margin: 40px 0;
+}

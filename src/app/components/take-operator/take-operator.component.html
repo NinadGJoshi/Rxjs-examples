@@ -1,0 +1,10 @@
+<div class="container">
+    <section>
+        <h2>Take Operator Example (value will popuplate upto 10)</h2>
+        <div *ngIf="(counter$ | async) as counter" changes-color [index]="counter" class="counter-wrapper">
+            <span>
+                {{counter}}
+            </span>
+        </div>
+    </section>
+</div>

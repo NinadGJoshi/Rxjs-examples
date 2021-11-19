@@ -1,0 +1,27 @@
+<div class="container">
+    <section>
+        <h2>Take Util Operator Example (loader will be shown till data loading)</h2>
+        <div *ngIf="isLoading$ | async" class="loader" id="loader-2">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+    </section>
+
+    <section>
+        <table style-table *ngIf="!(isLoading$ | async)">
+            <thead>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let person of persons">
+                    <td>{{person.firstName}}</td>
+                    <td>{{person.age}}</td>
+                    <td>{{person.gender}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</div>

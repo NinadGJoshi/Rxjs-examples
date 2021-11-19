@@ -1,0 +1,25 @@
+<div class="container">
+    <h2>Reduce Operator example</h2>
+    <table style-table>
+        <thead>
+            <th>Product ID</th>
+            <th>Product name</th>
+            <th>Product price</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of (products$ | async)">
+                <td>{{product.productId}}</td>
+                <td>{{product.name}}</td>
+                <td>{{product.price | number:'1.0'}}</td>
+            </tr>
+            <tr>
+                <td colspan="2">Total Amount</td>
+                <td><strong>
+                    <span>₹</span>
+                    {{totalAmount$ | async | number: '1.0'}}
+                </strong>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

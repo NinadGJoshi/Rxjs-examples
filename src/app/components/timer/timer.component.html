@@ -1,0 +1,11 @@
+<div class="timer-wrapper" (click)="resetTimer()">
+    <div>{{mins <= 10? '0'+(mins): mins}}</div>
+    <span>:</span>
+    <ng-container *ngIf="(seconds$ | async) as seconds">
+        <div>{{((seconds%60) <= 10? '0'+((seconds-1)%60): (seconds-1)%60)}}</div>
+    </ng-container>
+    <ng-container *ngIf="!(seconds$ | async) as seconds">
+        <div>00</div>
+    </ng-container>
+</div>
+

@@ -1,0 +1,51 @@
+<div class="nav-wrapper">
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="../../../assets/images/logo.png" alt="logo">
+    </a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Introduction <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/map-operator']">map operator</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/filter-operator']">filter operator</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/reduce-operator']">reduce operator</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/tap-operator']">tap</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/duc-operator']">distinctUntilChanged</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/take-operator']">take</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/take-until-operator']">takeUntil</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/interval-example']" routerLinkActive="router-link-active" >interval object</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/switchmap-operator']">switchMap</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/combine-latest']">combineLatest</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+</div>
+<div class="content-wrapper">
+    <router-outlet></router-outlet>
+</div>
