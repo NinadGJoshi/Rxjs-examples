@@ -12,3 +12,8 @@ Implementation screenshots:
 ![switchMap](https://user-images.githubusercontent.com/46490850/142643833-9135773e-2fd0-4147-9a02-9f6806c8ff05.JPG)
 ![duc](https://user-images.githubusercontent.com/46490850/142643860-74c909d2-c5ae-4951-bebd-948a7649b5e9.JPG)
 ![combineLatest](https://user-images.githubusercontent.com/46490850/142643869-9242da95-45d0-4ed8-aef6-9bfbb7293d49.JPG)
+
+Version 1.2
+Duc Component Search Grid implementation:
+
+![duc(2)](https://user-images.githubusercontent.com/46490850/142761250-90db5032-430b-4e25-a39b-8cc60e9882a0.JPG)
