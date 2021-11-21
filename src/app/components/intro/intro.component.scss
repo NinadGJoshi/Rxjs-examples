@@ -3,7 +3,6 @@
 .text-wrapper {
     margin: 20px;
     width: 1400px;
-    border: 1px solid #859095;
     background-color: $faint-gray-shade;
 
     h1 {
@@ -37,6 +36,46 @@
                         padding: 0;
                         font-family: monospace;
                         text-align: left;
+
+                        &:hover {
+                            position: absolute;
+                            top: -315%;
+                            left: -75%;
+                            width: 1200px;
+                            background-color: #fff;
+                            height: 500px;
+                            box-shadow: 0 0 10px 5px grey;
+                            cursor: pointer;
+                            font-size: 25px;
+                            opacity: 100%;
+                            padding: 25px;
+                        }
+                    }
+                }
+                article {
+                    .content-wrapper {
+                        font-family: 'Times New Roman', Times, serif;
+                        font-size: 16px;
+                        box-sizing: border-box;
+                        padding: 10px;
+                    }
+                    .img-wrapper {
+                        padding: 10px;
+                        img {
+                            position: relative;
+                            width: 100%;
+
+                            &:hover {
+                                position: absolute;
+                                top: -255%;
+                                left: -75%;
+                                width: 1200px;
+                                background-color: #FFF;
+                                height: 500px;
+                                box-shadow: 0 0 10px 5px grey;
+                                cursor: pointer;
+                            }
+                        }
                     }
                 }
             }
