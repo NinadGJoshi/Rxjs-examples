@@ -2,8 +2,10 @@
     width: 100px;
     height: 100px;
     border-radius: 100%;
-    position: relative;
+    position: absolute;
     margin: 0 auto;
+    top: 25%;
+    left: 50%;
   }
 
   #loader-2 span{
