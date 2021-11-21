@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CombineLatestComponent } from './combine-latest/combine-latest.component';
+import { CombineLatestComponent } from './components/combine-latest/combine-latest.component';
 import { DucComponentComponent } from './components/duc-component/duc-component.component';
 import { FilterOperatorComponent } from './components/filter-operator/filter-operator.component';
 import { IntervalExampleComponent } from './components/interval-example/interval-example.component';

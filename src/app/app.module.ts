@@ -19,7 +19,7 @@ import { DynamicColorChangeDirective } from './directives/dynamic-color-change.d
 import { TimerComponent } from './components/timer/timer.component';
 import { SwitchmapOperatorComponent } from './components/switchmap-operator/switchmap-operator.component';
 import { IntervalExampleComponent } from './components/interval-example/interval-example.component';
-import { CombineLatestComponent } from './combine-latest/combine-latest.component';
+import { CombineLatestComponent } from './components/combine-latest/combine-latest.component';
 
 @NgModule({
   declarations: [
