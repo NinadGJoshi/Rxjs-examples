@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, Subscription } from 'rxjs';
+import { Observable } from 'rxjs';
 import { DataProviderService } from 'src/app/services/data-provider.service';
 import { map, mergeMap, toArray } from 'rxjs/operators';
 

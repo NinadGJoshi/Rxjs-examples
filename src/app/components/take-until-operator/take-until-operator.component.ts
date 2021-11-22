@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BehaviorSubject, forkJoin, interval, Observable, Subject, Subscription } from 'rxjs';
+import { BehaviorSubject, forkJoin, interval, Observable, Subscription } from 'rxjs';
 import { distinctUntilChanged, map, shareReplay, take } from 'rxjs/operators';
 import { Person } from 'src/app/model/Person';
 import { DataProviderService } from 'src/app/services/data-provider.service';

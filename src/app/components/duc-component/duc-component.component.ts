@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Observable, of, Subscription } from 'rxjs';
-import { switchMap, distinctUntilChanged, filter, mergeMap, toArray, tap, startWith, map} from 'rxjs/operators';
+import { switchMap, distinctUntilChanged, filter, mergeMap, toArray, tap, map} from 'rxjs/operators';
 import { DataProviderService } from 'src/app/services/data-provider.service';
 
 @Component({

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { combineLatest, Observable } from 'rxjs';
-import { map, mergeMap, tap, toArray } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
 import { Person } from 'src/app/model/Person';
 import { DataProviderService } from 'src/app/services/data-provider.service';
 

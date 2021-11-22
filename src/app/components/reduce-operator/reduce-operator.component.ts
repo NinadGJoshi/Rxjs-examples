@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { mergeMap, reduce, retry, toArray } from 'rxjs/operators';
+import { mergeMap, reduce, toArray } from 'rxjs/operators';
 import { DataProviderService } from 'src/app/services/data-provider.service';
 
 @Component({

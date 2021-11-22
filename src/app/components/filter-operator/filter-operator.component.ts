@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, Subscription } from 'rxjs';
+import { Observable } from 'rxjs';
 import { filter, mergeMap, toArray } from 'rxjs/operators';
-import { Person } from 'src/app/model/Person';
 import { DataProviderService } from 'src/app/services/data-provider.service';
 
 @Component({
