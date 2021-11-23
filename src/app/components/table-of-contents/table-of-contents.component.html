@@ -1,0 +1,11 @@
+<aside class="table-content-wrapper">
+    <div class="card">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item" *ngFor="let item of sections; let i=index">
+              <a href="javascript: void(0);" (click)="getSelectedSectionIndex(i)">
+                {{item}}
+              </a>
+          </li>
+        </ul>
+      </div>
+</aside>

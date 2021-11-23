@@ -1,88 +1,86 @@
 @import "../../../assets/css-vars/variables.scss";
 
+h1 {
+    text-align: center;
+    font-size: 85px;
+    margin: 40px 0;
+    font-family: $intro-heading-text;
+}
 .text-wrapper {
     margin: 20px;
-    width: 1400px;
+    width: 1600px;
     background-color: $faint-gray-shade;
 
-    h1 {
-        text-align: center;
-        font-size: 85px;
-        margin: 40px 0;
-        font-family: $intro-heading-text;
-    }
 
-    .info-wrapper {
-        section {
-            margin: 10px 0;
-            .text-content {
-                h3 {
-                    text-align: center;
-                    vertical-align: middle;
-                    line-height: 180px;
-                }
-                ul{
-                    padding: 0;
-                    margin: 0;
-                    li {
-                        text-align: left;
-                        font-size: large;
-                        margin: 20px 0;
-                    }
-                }
-                pre {
-                    width: 98%;
-                    code {
-                        padding: 0;
-                        font-family: monospace;
-                        text-align: left;
+    section {
+        padding: 20px;
 
-                        &:hover {
-                            position: absolute;
-                            top: -315%;
-                            left: -75%;
-                            width: 1200px;
-                            background-color: #fff;
-                            height: 500px;
-                            box-shadow: 0 0 10px 5px grey;
-                            cursor: pointer;
-                            font-size: 25px;
-                            opacity: 100%;
-                            padding: 25px;
-                        }
-                    }
-                }
-                article {
-                    .content-wrapper {
-                        font-family: 'Times New Roman', Times, serif;
-                        font-size: 16px;
-                        box-sizing: border-box;
-                        padding: 10px;
-                    }
-                    .img-wrapper {
-                        padding: 10px;
-                        img {
-                            position: relative;
-                            width: 100%;
+        h2 {
+            font-family: cursive;
+            font-size: 36px;
+            font-weight: 200;
+            background-color: black;
+            color: #FFF;
+            padding: 6px;
+            margin: -20px 0 0 0;
+        }
 
-                            &:hover {
-                                position: absolute;
-                                top: -255%;
-                                left: -75%;
-                                width: 1200px;
-                                background-color: #FFF;
-                                height: 500px;
-                                box-shadow: 0 0 10px 5px grey;
-                                cursor: pointer;
-                            }
-                        }
-                    }
-                }
+        ul {
+            font-size: 20px;
+            padding: 50px;
+            li {
+                margin: 5px 0;
             }
         }
-        hr {
-            border: 1px dashed black;
-            opacity: 0.25;
+
+        .image-wrapper {
+            display: flex;
+            
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            img#img1 {
+                width: 800px;
+                height: 100%;
+                margin: 30px 0;
+            }
+
+            img#img2 {
+                width: 400px;
+                height: 350px;
+                margin: 30px 0;
+            }
+
+        }
+
+        .content-wrapper {
+            padding: 50px 20px 20px 20px;
+            p {
+                font-size: 16px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            table {
+                margin-top: 30px;
+            }
+        }
+
+        article {
+
+            button {
+                &:active {
+                    outline: none;
+                }
+            }
+            .output {
+                width: 100%;
+            }
+            pre {
+                margin: 30px 0;
+                padding: 20px;
+                
+                font-size: 16px;
+            }
         }
     }
 }

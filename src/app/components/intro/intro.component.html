@@ -1,86 +1,168 @@
 <div class="container-fluid">
     <div class="text-wrapper">
-        <h1>Introduction to Observables</h1>
+        <div class="col-sm-12 col-md-3">
+            <table-of-contents (onSelectionChanged)="getSelection($event)"></table-of-contents>
+        </div>
+        <div class="col-sm-12 col-md-9">
+            <section *ngIf="sectionIndex === 0">
+                <div class="text-content">
+                    <div class="col-sm-12 col-md-12">
+                        <h2>What are the Observables?</h2>
+                    </div>
+                    <div class="col-sm-12 col-md-12">
+                        <article>
+                            <ul>
+                                <li>Javascript objects</li>
+                                <li>They are <strong>asynchronous</strong> in nature</li>
+                                <li>Connects a Producer to a Consumer</li>
+                                <li>Observables are <strong>Lazy</strong></li>
+                                <li>Observables are <strong>cancelable</strong></li>
+                                <li>Observables provide many operators</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </section>
 
-        <div class="info-wrapper">
-            <section>
-                <div class="text-content row">
-                    <div class="col-sm-12 col-md-6">
-                        <h3>What are the Observables?</h3>
+            <section *ngIf="sectionIndex === 1">
+                <div class="text-content">
+                    <div class="col-sm-12 col-md-12">
+                        <h2>Phases of Observables</h2>
                     </div>
-                    <div class="col-sm-12 col-md-6">
-                        <ul>
-                            <li>Javascript objects</li>
-                            <li>They are <strong>asynchronous</strong> in nature</li>
-                            <li>Connects a Producer to a Consumer</li>
-                            <li>Observables are <strong>Lazy</strong></li>
-                            <li>Observables are <strong>cancelable</strong></li>
-                            <li>Observables provide many operators</li>
-                        </ul>
+                    <div class="col-sm-12 col-md-12">
+                        <article>                
+                            <ul>
+                                <li><strong>Creation</strong></li>
+                                <li><strong>Subscription</strong></li>
+                                <li><strong>Execution</strong></li>
+                                <li><strong>Destruction</strong></li>
+                            </ul>
+
+                            <div class="image-wrapper">
+                                <img id="img1" src="../../../assets/images/observable-phases.png" alt="phases of operators">
+                            </div>
+                        </article>
                     </div>
                 </div>
             </section>
 
-            <hr>
-            <section>
-                <div class="text-content row">
-                    <div class="col-sm-12 col-md-6">
-                        <h3>Phases of Observables</h3>
+            <section *ngIf="sectionIndex === 2">
+                <div class="text-content">
+                    <div class="col-sm-12 col-md-12">
+                        <h2>Types of values observable can deliver to subscriber</h2>
                     </div>
-                    <div class="col-sm-12 col-md-6">
-                        <ul>
-                            <li><strong>Creation</strong></li>
-                            <li><strong>Subscription</strong></li>
-                            <li><strong>Execution</strong></li>
-                            <li><strong>Destruction</strong></li>
-                        </ul>
+                    <div class="col-sm-12 col-md-12">
+                        <div class="content-wrapper">
+                            <p>A handler for receiving observable notifications implements the Observer interface. It is an object that defines callback methods to handle the three types of notifications that an observable can send:</p>
+                            <table style-table>
+                                <thead>
+                                    <th>Type</th>
+                                    <th>Description</th>
+                                    <th>Required</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><em>next*</em></td>
+                                        <td>A handler for each delivered value. Called zero or more times after execution starts.</td>
+                                        <td>Yes</td>
+                                    </tr>
+                                    <tr>
+                                        <td><em>error</em></td>
+                                        <td>A handler for an error notification. An error halts execution of the observable instance.</td>
+                                        <td><em>No</em></td>
+                                    </tr>
+                                    <tr>
+                                        <td><em>complete</em></td>
+                                        <td>A handler for the execution-complete notification. Delayed values can continue to be delivered to the next handler after execution is complete.</td>
+                                        <td><em>No</em></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <article>
+                            <h4>Example:</h4>
+                            <pre>
+                                <code>
+                                    observer.next(‘hii’);//this can be multiple (more than one)
+                                    observer.error(‘error occurs’) // this call whenever any error occus.
+                                    Observer.complete(‘completion of delivery of all values’) // this tells the subscriptions to observable is completed. No delivery is going to take place after this statement.
+                                </code>
+                            </pre>
+                        </article>
                     </div>
                 </div>
             </section>
-            <hr>
-            <section>
-                <div class="text-content row">
-                    <div class="col-sm-12 col-md-6">
-                        <h3>The 3 types of values observable can deliver to subscriber are:</h3>
-                    </div>
-                    <div class="col-sm-12 col-md-6">
-                        <pre>
-                            <code>
-                                <p>observer.next(‘hii’);//this can be multiple (more than one)</p>
-                                <p>observer.error(‘error occurs’) // this call whenever any error occus.</p>
-                                <p>Observer.complete(‘completion of delivery of all values’) // this tells the subscriptions to observable is completed. No delivery is going to take place after this statement.</p>
-                            </code>
-                        </pre>
-                    </div>
-                </div>
-            </section>
-            <hr>
-            <section>
-                <div class="text-content row">
-                    <div class="col-sm-12 col-md-6">
-                        <h3>Example:</h3>
-                    </div>
-                    <div class="col-sm-12 col-md-6">
-                        <pre>
-                            <code> observable = Rx.Observable.create((observer: any) =>{{"{"}}
-                                        setTimeout(()=>{{"{"}}
-                                            observer.next(‘Yes, somehow understandable!’)
-                                        {{"}"}}, 1000)
-                                    observer.next(‘Hi Observable’);        
 
-                                    observer.next( ‘Am I understandable?’ );{{"}"}})
-                            </code>
-                        </pre>
+            <section *ngIf="sectionIndex === 3">
+                <div class="text-content">
+                    <div class="col-sm-12 col-md-12">
+                        <h2>Example</h2>
+                    </div>
+                    <div class="col-sm-12 col-md-12">
+                        <article>
+                            <pre>
+                                <code> observable = new Observable((observer: any) =>{{"{"}}
+                                            setTimeout(()=>{{"{"}}
+                                                observer.next(‘Yes, somehow understandable!’)
+                                            {{"}"}}, 1000)
+                                        observer.next(‘Hi Observable’);        
+    
+                                        observer.next( ‘Am I understandable?’ );{{"}"}})
+                                </code>
+                            </pre>
+                            <div class="output">
+                                <button type="button" class="btn btn-outline-primary btn-lg active" (click)="onLoadResult()" *ngIf="!(loadResult$ | async)">Show Result</button>
+                                <button type="button" class="btn btn-outline-danger btn-lg active" (click)="onLoadResult()" *ngIf="(loadResult$ | async)">Clear Result</button>
+
+                                <ng-template [ngIf]="(loadResult$ | async)">
+                                    <pre>
+                                        Hi Observable
+                                        Am I understandable?
+                                        Yes, somehow understandable!
+                                    </pre>
+                                </ng-template>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </section>
-            <hr>
-            <section>
+
+            <section *ngIf="sectionIndex === 4">
                 <div class="text-content row">
-                    <div class="col-sm-12 col-md-6">
-                        <h3>Operators</h3>
+                    <div class="col-sm-12 col-md-12">
+                        <h2>Piping of Operators</h2>
                     </div>
-                    <div class="col-sm-12 col-md-6">
+                    <div class="col-sm-12 col-md-12">
+                        <article>
+                            <div class="content-wrapper">
+                                <p>Pipeable operators are functions, so they could be used like ordinary functions: op()(obs) — but in practice, there tend to be many of them convolved together, and quickly become unreadable: op4()(op3()(op2()(op1()(obs))))</p>
+                                <p>
+                                    For that reason, Observables have a method called .pipe() that accomplishes the same thing while being much easier to read:
+                                </p>
+                            </div>
+                            <pre>
+                                <code>
+                                    Observable$.pipe(op1(),op2(),op3(),....)
+
+                                    Observable$.pipe(
+                                        filter(...),
+                                        map(...),
+                                        reduce(...),
+                                        share()
+                                    )
+                                </code>
+                            </pre>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section *ngIf="sectionIndex === 5">
+                <div class="text-content">
+                    <div class="col-sm-12 col-md-12">
+                        <h2>Operators</h2>
+                    </div>
+                    <div class="col-sm-12 col-md-12">
                         <article>
                             <div class="content-wrapper">
                                 <p>
@@ -90,11 +172,36 @@
                                     The diagram below might help illustrate it a little better.
                                 </p>
                             </div>
-                            <div class="img-wrapper">
-                                <!-- TODO: need to implement modal component here -->
-                                <img src="../../../assets/images/OperatorExplanation.png" alt="working of operators">
+                            <div class="image-wrapper">
+                                <img id="img1" src="../../../assets/images/OperatorExplanation.png" alt="working of operators">
+                                <img id="img2" src="../../../assets/images/observable-intro.png" alt="observable image">
                             </div>
                         </article>
+                    </div>
+                </div>
+            </section>
+
+
+            <section *ngIf="sectionIndex === 6">
+                <div class="text-content">
+                    <div class="col-sm-12 col-md-12">
+                        <h2>References</h2>
+                    </div>
+                    <div class="col-sm-12 col-md-12">
+                        <ul>
+                            <li>
+                                <a href="https://www.learnrxjs.io/learn-rxjs/operators" target="_blank" rel="noopener noreferrer">https://www.learnrxjs.io/learn-rxjs/operators</a>
+                            </li>
+                            <li>
+                                <a href="https://ultimatecourses.com/blog/rxjs-observables-observers-operators" target="_blank" rel="noopener noreferrer">https://ultimatecourses.com/blog/rxjs-observables-observers-operators</a>
+                            </li>
+                            <li>
+                                <a href="https://rxjs.dev/guide/operators" target="_blank" rel="noopener noreferrer">https://rxjs.dev/guide/operators</a>
+                            </li>
+                            <li>
+                                <a href="https://angular.io/guide/observables" target="_blank" rel="noopener noreferrer">https://angular.io/guide/observables</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </section>

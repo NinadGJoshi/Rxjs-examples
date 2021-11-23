@@ -20,6 +20,7 @@ import { TimerComponent } from './components/timer/timer.component';
 import { SwitchmapOperatorComponent } from './components/switchmap-operator/switchmap-operator.component';
 import { IntervalExampleComponent } from './components/interval-example/interval-example.component';
 import { CombineLatestComponent } from './components/combine-latest/combine-latest.component';
+import { TableOfContentsComponent } from './components/table-of-contents/table-of-contents.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { CombineLatestComponent } from './components/combine-latest/combine-late
     TimerComponent,
     SwitchmapOperatorComponent,
     IntervalExampleComponent,
-    CombineLatestComponent
+    CombineLatestComponent,
+    TableOfContentsComponent
   ],
   imports: [
     BrowserModule,
