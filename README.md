@@ -17,3 +17,14 @@ Version 1.2
 Duc Component Search Grid implementation:
 
 ![duc(2)](https://user-images.githubusercontent.com/46490850/142761250-90db5032-430b-4e25-a39b-8cc60e9882a0.JPG)
+
+Version 2.0.0
+Introduction component implementation screenshots
+
+![intro1](https://user-images.githubusercontent.com/46490850/142986819-f541c46b-3737-49ac-a55b-03472655ea90.JPG)
+![intro2](https://user-images.githubusercontent.com/46490850/142986827-ae35aae0-ccfa-4569-bec1-a189783e8eab.JPG)
+![intro3](https://user-images.githubusercontent.com/46490850/142986833-18f0caeb-0339-4f05-826e-0d2a946c9e6b.JPG)
+![intro4](https://user-images.githubusercontent.com/46490850/142986838-01b98544-43d2-48d2-956e-42babed1c1ae.JPG)
+![intro5](https://user-images.githubusercontent.com/46490850/142986844-3f88486e-2e83-4ede-b183-49934fc17240.JPG)
+![intro6](https://user-images.githubusercontent.com/46490850/142986850-0de75856-c736-47d4-8df5-6f945a64dcb7.JPG)
+![intro7](https://user-images.githubusercontent.com/46490850/142986852-365cfeca-fa72-44bd-b1b2-f6cfba2e84f3.JPG)
