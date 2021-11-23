@@ -1,11 +1,5 @@
 @import "../../../assets/css-vars/variables.scss";
 
-h1 {
-    text-align: center;
-    font-size: 85px;
-    margin: 40px 0;
-    font-family: $intro-heading-text;
-}
 .text-wrapper {
     margin: 20px;
     width: 1600px;
@@ -16,12 +10,13 @@ h1 {
         padding: 20px;
 
         h2 {
+            display: inline-block;
             font-family: cursive;
             font-size: 36px;
             font-weight: 200;
-            background-color: black;
+            background-color: #000;
             color: #FFF;
-            padding: 6px;
+            padding: 10px;
             margin: -20px 0 0 0;
         }
 

@@ -1,6 +1,24 @@
 <div class="container">
-    <section>
-        <h2>Distinct Util Changed Operator Example</h2>
+    <h1 class="page-heading">DistinctUtilChanged</h1>
+    <div class="content-wrapper">
+        <ul>
+            <li>It checks for the changes in current value and previous value</li>
+            <li>If current and previous values are different then only the value is pushed to the next observer</li>
+        </ul>
+    </div>
+    
+    <section class="page-sections">
+        <h3>Code:</h3>
+        <pre>
+            <code>
+                Observable$.pipe(
+                    distinctUntilChanged()
+                )
+            </code>
+        </pre>
+    </section>
+
+    <section class="page-sections">
         <ng-container *ngIf="(form$ | async) as form">
             <form [formGroup]="form">
                 <div class="input-container">
@@ -22,21 +40,22 @@
         </ng-container>
     </section>
 
-    <section>
-            <h3>Searching text starts with "{{(control$ | async)}}"</h3>
-            <table style-table>
-                <thead>
-                    <th>Name</th>
-                    <th>Age</th>
-                    <th>Gender</th>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let person of ( person$ | async )">
-                        <td>{{person.fullName}}</td>
-                        <td>{{person.age}}</td>
-                        <td>{{person.gender}}</td>
-                    </tr>
-                </tbody>
-            </table>
+    <section class="page-sections">
+        <h3>Demo:</h3>
+        <h3>Searching text starts with "{{(control$ | async)}}"</h3>
+        <table style-table>
+            <thead>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let person of ( person$ | async )">
+                    <td>{{person.fullName}}</td>
+                    <td>{{person.age}}</td>
+                    <td>{{person.gender}}</td>
+                </tr>
+            </tbody>
+        </table>
     </section>
 </div>

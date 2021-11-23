@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CombineLatestComponent } from './components/combine-latest/combine-latest.component';
 import { DucComponentComponent } from './components/duc-component/duc-component.component';
 import { FilterOperatorComponent } from './components/filter-operator/filter-operator.component';
+import { ForkjoinComponent } from './components/forkjoin/forkjoin.component';
 import { IntervalExampleComponent } from './components/interval-example/interval-example.component';
 import { IntroComponent } from './components/intro/intro.component';
 import { MapOperatorComponent } from './components/map-operator/map-operator.component';
@@ -61,6 +62,10 @@ const routes: Routes = [
   {
     path: 'combine-latest',
     component: CombineLatestComponent
+  },
+  {
+    path: 'fork-join',
+    component: ForkjoinComponent
   }
 ];
 

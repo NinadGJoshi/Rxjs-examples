@@ -11,11 +11,13 @@ import { map, mergeMap, toArray } from 'rxjs/operators';
 export class MapOperatorComponent implements OnInit {
 
   public person$: Observable<any>;
+  public source$?: Observable<any>;
   constructor(private dps: DataProviderService) { 
     this.person$ = new Observable();
   }
 
   ngOnInit(): void {
+    this.source$ = this.dps.getPersonData().pipe(map(data=>data['person']));
     this.person$ = this.dps.getPersonData().pipe(
       mergeMap(result => result.person),
       map(

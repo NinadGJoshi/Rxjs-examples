@@ -5,19 +5,22 @@
         text-align: center;
     }
 
-    .list-group-item {
-        height: 82px;
-        padding: 30px;
-        text-align: center;
+    ul {
+        font-size: 16px;
+        li {
+            margin: 0;
+            height: 82px;
+            padding: 30px;
+            text-align: center;
 
-        &:hover {
-            box-shadow: -2px 0px 0px 4px #f9f9f9;
-        }
-
-        a {
-            font-size: 16px;
-            font-family: monospace;
+            &:hover {
+                box-shadow: -2px 0px 0px 4px #f9f9f9;
+            }
+    
+            a {
+                font-size: 16px;
+                font-family: monospace;
+            }
         }
     }
-
 }

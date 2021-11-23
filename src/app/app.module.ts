@@ -21,6 +21,7 @@ import { SwitchmapOperatorComponent } from './components/switchmap-operator/swit
 import { IntervalExampleComponent } from './components/interval-example/interval-example.component';
 import { CombineLatestComponent } from './components/combine-latest/combine-latest.component';
 import { TableOfContentsComponent } from './components/table-of-contents/table-of-contents.component';
+import { ForkjoinComponent } from './components/forkjoin/forkjoin.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { TableOfContentsComponent } from './components/table-of-contents/table-o
     SwitchmapOperatorComponent,
     IntervalExampleComponent,
     CombineLatestComponent,
-    TableOfContentsComponent
+    TableOfContentsComponent,
+    ForkjoinComponent
   ],
   imports: [
     BrowserModule,

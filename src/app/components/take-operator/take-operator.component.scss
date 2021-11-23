@@ -1,4 +1,4 @@
-section {
+.demo {
     display: grid;
     place-items: center;
     .counter-wrapper {
@@ -13,4 +13,5 @@ section {
         color: #FFF;
         background-color: #000;
     }
+    margin-bottom: 30px;
 }

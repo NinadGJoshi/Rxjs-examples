@@ -12,7 +12,7 @@ export class TapOperatorComponent implements OnInit {
 
   public person$: Observable<any>;
   public products$: Observable<any>;
-  public totalAmount: number = 0;
+  public avgAmount: number = 0;
   public averageAge: number = 0;
   constructor(private dps: DataProviderService) {
     this.person$ = new Observable();
@@ -29,7 +29,7 @@ export class TapOperatorComponent implements OnInit {
       }),
       toArray(),
       tap(products=> {
-        this.totalAmount = priceTotal/ products.length;
+        this.avgAmount = priceTotal/ products.length;
       })
     );
 

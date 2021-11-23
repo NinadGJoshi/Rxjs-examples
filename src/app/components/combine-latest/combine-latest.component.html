@@ -1,22 +1,43 @@
 <div class="container">
-    <h2>Combine Latest example person-prodcuts list</h2>
-    <table style-table>
-        <thead>
-            <th>Customer Name</th>
-            <th>Age</th>
-            <th>Product Name</th>
-            <th>Product Price</th>
-        </thead>
-        <tbody>
-            <ng-container *ngIf="(perchaseList$ | async) as perchase">
-                <tr *ngFor="let record of perchase">
-                    <td>{{record.custName}}</td>
-                    <td>{{record.custAge}}</td>
-                    <td>{{record.productName}}</td>
-                    <td>{{record.productPrice}}</td>
-                </tr>
-            </ng-container>
-            
-        </tbody>
-    </table>
+    <h1 class="page-heading">CombineLatest</h1>
+    <div class="content-wrapper">
+        <ul>
+            <li>combineLatest combines the values from all the Observables passed in the observables array.</li>
+            <li>whenever any Observable emits, collecting an array of the most recent values from each Observable.</li>
+        </ul>
+    </div>
+
+    <section class="page-sections">
+        <h3>Code:</h3>
+        <pre>
+            <code>
+                combineLatest([Observable1$, Observable2$,...........])
+                .subscribe(([lastest_emitted_val1, lastest_emitted_val2, ...])=> {{'{'}}...{{'}'}})
+            </code>
+        </pre>
+    </section>
+
+    <section class="page-sections">
+        <h3>Example:</h3>
+        <h5>Combined values from 2 observables</h5>
+        <table style-table>
+            <thead>
+                <th>Customer Name</th>
+                <th>Age</th>
+                <th>Product Name</th>
+                <th>Product Price</th>
+            </thead>
+            <tbody>
+                <ng-container *ngIf="(perchaseList$ | async) as perchase">
+                    <tr *ngFor="let record of perchase">
+                        <td>{{record.custName}}</td>
+                        <td>{{record.custAge}}</td>
+                        <td>{{record.productName}}</td>
+                        <td>{{record.productPrice}}</td>
+                    </tr>
+                </ng-container>
+                
+            </tbody>
+        </table>
+    </section>
 </div>

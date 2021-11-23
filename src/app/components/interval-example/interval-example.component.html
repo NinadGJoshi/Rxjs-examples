@@ -1,5 +1,22 @@
 <div class="container">
-    <section>
+    <h1 class="page-heading">Interval</h1>
+    <div class="content-wrapper">
+        <ul>
+            <li>interval returns an Observable that emits an infinite sequence of ascending integers, with a constant interval of time.</li>
+            <li>The first emission is not sent immediately, but only after the first period has passed.</li>
+        </ul>
+    </div>
+
+    <section class="page-sections">
+        <h3>Code:</h3>
+        <pre>
+            <code>
+                Observable$ = interval(1000); // Emits value from 0 to infinity after every second.
+            </code>
+        </pre>
+    </section>
+    
+    <section class="demo">
         <h3>Couter example using interval observable (click to restart)</h3>
         <timer></timer>
     </section>

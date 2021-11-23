@@ -1,6 +1,26 @@
 <div class="container">
-    <section>
-        <h2>Take Operator Example (value will popuplate upto 10)</h2>
+    <h1 class="page-heading">Take</h1>
+    <div class="content-wrapper">
+        <ul>
+            <li>It will take the first n number of emissions from the source observable.</li>
+            <li>Emmits the first n values to next observable</li>
+        </ul>
+    </div>
+
+    <section class="page-sections">
+        <h3>Code:</h3>
+        <pre>
+            <code>
+                interval(1000).pipe(
+                    take(11)
+                )
+            </code>
+        </pre>
+    </section>
+
+    <h3>Example:</h3>
+    <section class="demo">
+        <h3>Counting upto 10</h3>
         <div *ngIf="(counter$ | async) as counter" changes-color [index]="counter" class="counter-wrapper">
             <span>
                 {{counter}}

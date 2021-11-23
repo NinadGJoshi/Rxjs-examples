@@ -1,19 +1,59 @@
 <div class="container">
-    <h2>Filter Operator example (age < 40)</h2>
-    <table style-table>
-        <thead>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Age</th>
-            <th>Gender</th>
-        </thead>
-        <tbody>
-            <tr *ngFor="let person of (person$ | async)">
-                <td>{{person.firstName}}</td>
-                <td>{{person.lastName}}</td>
-                <td>{{person.age}}</td>
-                <td>{{person.gender}}</td>
-            </tr>
-        </tbody>
-    </table>
+    <h1 class="page-heading">Filter</h1>
+    <div class="content-wrapper">
+        <ul>
+            <li>This operator will filter the values from source Observable based on the predicate function</li>
+            <li>The predicate function , will return a boolean value.</li>
+            <li>Output will get filtered if the function returns a truthy value.</li>
+        </ul>
+    </div>
+
+    <section class="page-sections">
+        <h3>Code:</h3>
+        <pre>
+            <code>
+                Observable$.pipe(
+                    filter(person=> person.age < 40)
+                )
+            </code>
+        </pre>
+    </section>
+
+    <section class="page-sections">
+        <h3>Example:</h3>
+        <h5>Before filter</h5>
+        <table style-table>
+            <thead>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let person of (source$ | async)">
+                    <td>{{person.firstName}}</td>
+                    <td>{{person.lastName}}</td>
+                    <td>{{person.age}}</td>
+                    <td>{{person.gender}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h5>After filter (age < 40)</h5>
+        <table style-table>
+            <thead>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let person of (person$ | async)">
+                    <td>{{person.firstName}}</td>
+                    <td>{{person.lastName}}</td>
+                    <td>{{person.age}}</td>
+                    <td>{{person.gender}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
 </div>

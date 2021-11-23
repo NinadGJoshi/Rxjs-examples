@@ -1,10 +1,32 @@
 <div class="container">
-    <section>
+    <h1 class="page-heading">SwitchMap</h1>
+    <div class="content-wrapper">
+        <ul>
+            <li>The switchMap operator will create a derived observable (called inner observable) from a source observable and emit those values.</li>
+            <li>When the source emits a new value, it will create a new inner observable and switch to those values instead.</li>
+            <li>Only after all source observables complete, send the complete notification to the observer.</li>
+        </ul>
+    </div>
+
+    <section class="page-sections">
+        <h3>Code:</h3>
+        <pre>
+            <code>
+                this.clicks$
+                .pipe(
+                    switchMap(() => interval(1000))
+            </code>
+        </pre>
+    </section>
+
+    <h3>Example:</h3>
+    <section class="demo">
         <h2>Click button to start counter</h2>
-        <button #button class="btn btn-primary">Start</button>
         
         <div class="counter-container">
             <span>{{count}}</span>
         </div>
+        
+        <button #button class="btn btn-primary">Start</button>
     </section>
 </div>

@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { BehaviorSubject, forkJoin, interval, Observable, Subscription } from 'rxjs';
-import { distinctUntilChanged, map, shareReplay, take } from 'rxjs/operators';
-import { Person } from 'src/app/model/Person';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { fromEvent, Observable, Subscription, timer } from 'rxjs';
+import { switchMap, takeUntil, tap } from 'rxjs/operators';
 import { DataProviderService } from 'src/app/services/data-provider.service';
 
 @Component({
@@ -10,38 +9,29 @@ import { DataProviderService } from 'src/app/services/data-provider.service';
   styleUrls: ['./take-until-operator.component.scss']
 })
 export class TakeUntilOperatorComponent implements OnInit {
-  public isLoadingSub?: BehaviorSubject<boolean>;
-  public isLoading$?: Observable<boolean>;
-  public persons: Array<Person> = [];
-  public subs: Array<Subscription> = [];
+  @ViewChild('startBtn',{static:true}) startBtn?:  any;
+  @ViewChild('stopBtn',{static:true}) stopBtn?:  any;
+  public startClicked$?:Observable<any>;
+  public stopClicked$?:Observable<any>;
+  public count: number = 0;
+  private sub?: Subscription;
 
   constructor(private dps: DataProviderService) {
-    this.isLoadingSub = new BehaviorSubject<boolean>(true);
-    this.isLoading$ = this.isLoadingSub?.asObservable().pipe(distinctUntilChanged(),shareReplay(1));
+
+  }
+
+  ngAfterViewInit(): void {
+    this.startClicked$ = fromEvent(this.startBtn.nativeElement, 'click');
+    this.stopClicked$ = fromEvent(this.stopBtn.nativeElement, 'click');
+
+    this.startClicked$.pipe(
+      switchMap(()=> timer(0, 1000)),
+      tap(count=> this.count = count),
+      takeUntil(this.stopClicked$)
+    ).subscribe(console.log);
+
   }
 
   ngOnInit(): void {
-    this.loadData();
   }
-
-  private loadData():void {
-    this.isLoadingSub?.next(true);
-    // Mocking the actual API call
-    // The forjoin will run the callback after the given interval
-    this.subs.push(
-      forkJoin([this.dps.getPersonData().pipe(map((data: any)=> data['person'])), interval(1000).pipe(take(5))]).subscribe(([data])=>{
-        this.persons = data;
-        this.isLoadingSub?.next(false);
-      },
-      (err)=>{
-        console.error(err);
-        this.isLoadingSub?.next(false);
-      })
-    )
-  }
-
-  ngOnDestroy(){
-    this.subs.forEach(sub=> sub.unsubscribe())
-  }
-
 }

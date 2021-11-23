@@ -1,0 +1,52 @@
+<div class="container">
+    <h1 class="page-heading">ForkJoin</h1>
+    
+    <div class="content-wrapper">
+        <ul>
+            <li>forkJoin is an operator that takes any number of input observables which can be passed either as an array or a dictionary of input observables.</li>
+            <li>forkJoin will wait for all passed observables to emit and complete and then it will emit an array or an object with last values from corresponding observables.</li>
+            <li>forkJoin will not emit more than once and it will complete after that.</li>
+        </ul>
+    </div>
+    
+    <section class="page-sections">
+        <h3>Code:</h3>
+        <pre>
+            <code>
+                forkJoin([Observable1$, Observable2$,...........])
+                .subscribe(([last_emitted_val1, last_emitted_val2, ...])=> {{'{'}}...{{'}'}})
+            </code>
+        </pre>
+    </section>
+    
+    <section>
+        <div *ngIf="isLoading$ | async" class="loader" id="loader-2">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+    </section>
+
+    <h3>Demo:</h3>
+    <ng-template [ngIf]="isLoading$ | async"><h3>Loading...</h3></ng-template>
+    <ng-template [ngIf]="!(isLoading$ | async)">
+        <h3>Data loaded after completion of both the observables.</h3>
+    </ng-template>
+
+    <section class="page-sections" *ngIf="!(isLoading$ | async)">
+        <table style-table >
+            <thead>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let person of persons">
+                    <td>{{person.firstName}}</td>
+                    <td>{{person.age}}</td>
+                    <td>{{person.gender}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</div>

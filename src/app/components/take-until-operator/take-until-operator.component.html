@@ -1,27 +1,34 @@
 <div class="container">
-    <section>
-        <h2>Take Util Operator Example (loader will be shown till data loading)</h2>
-        <div *ngIf="isLoading$ | async" class="loader" id="loader-2">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+    <h1 class="page-heading">TakeUtil</h1>
+    <div class="content-wrapper">
+        <ul>
+            <li>It subscribes and begins mirroring the source Observable. It also monitors a second Observable,</li>
+            <li>If the notifier emits a value, the output Observable stops mirroring the source Observable and completes.</li>
+            <li>If the notifier doesn't emit any value and completes then takeUntil will pass all values.</li>
+        </ul>
+    </div>
+
+    <section class="page-sections">
+        <h3>Code:</h3>
+        <pre>
+            <code>
+                interval(1000).pipe(
+                    take(11)
+                )
+            </code>
+        </pre>
     </section>
 
-    <section>
-        <table style-table *ngIf="!(isLoading$ | async)">
-            <thead>
-                <th>Name</th>
-                <th>Age</th>
-                <th>Gender</th>
-            </thead>
-            <tbody>
-                <tr *ngFor="let person of persons">
-                    <td>{{person.firstName}}</td>
-                    <td>{{person.age}}</td>
-                    <td>{{person.gender}}</td>
-                </tr>
-            </tbody>
-        </table>
+    <section class="demo">
+        <h2>The counter will start on start button click it will count until stop is clicked</h2>
+        <div class="counter-container">
+            <span>{{count}}</span>
+        </div>
+        <div class="action-btn">
+            <button #startBtn type="button" class="btn btn-info">Start</button>
+            <button #stopBtn type="button" class="btn btn-info" [disabled]="!(startClicked$ | async)">Stop</button>
+        </div>
+        <h2>User cannot restart the counter as observable gets unsubscribed on stop</h2>
+        
     </section>
 </div>

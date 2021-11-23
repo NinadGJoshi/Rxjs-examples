@@ -17,7 +17,7 @@ export class CombineLatestComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.perchaseList$ =combineLatest([this.dps.getPersonData().pipe(map(data=> data['person'])), this.dps.getProductsData().pipe(map(data=> data['products']))]).pipe(
+    this.perchaseList$ = combineLatest([this.dps.getPersonData().pipe(map(data=> data['person'])), this.dps.getProductsData().pipe(map(data=> data['products']))]).pipe(
       map((perchaseDetails: any, index)=> {
         const personData = perchaseDetails[0];
         const productData = perchaseDetails[1];

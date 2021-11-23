@@ -1,6 +1,26 @@
 <div class="container">
-    <section>
-        <h3>Calculating average age using tap</h3>
+    <h1 class="page-heading">Tap</h1>
+    <div class="content-wrapper">
+        <ul>
+            <li>This operator will have the output the same as the source observable.</li>
+            <li>It can be used to log the values to the user from the observable.</li>
+        </ul>
+    </div>
+
+    <section class="page-sections">
+        <h3>Code:</h3>
+        <pre>
+            <code>
+                Observable$.pipe(
+                    tap(product=>priceTotal += product.price)
+                )
+            </code>
+        </pre>
+    </section>
+
+    <section class="page-sections">
+        <h3>Example:</h3>
+        <h5>Average age is calculated by mean value summation of all emitted source values</h5>
         <table style-table>
             <thead>
                 <th>First Name</th>
@@ -23,8 +43,8 @@
         </table>
     </section>
 
-    <section>
-        <h3>Calculating average product price using tap</h3>
+    <section class="page-sections">
+        <h5>Average amount is calculated by mean value of summation of all emitted source values</h5>
         <table style-table>
             <thead>
                 <th>Product ID</th>
@@ -41,7 +61,7 @@
                     <td colspan="2">Average Amount</td>
                     <td><strong>
                         <span>₹</span>
-                        {{totalAmount | number:'1.0-0' }}
+                        {{avgAmount | number:'1.0-0' }}
                     </strong>
                     </td>
                 </tr>
