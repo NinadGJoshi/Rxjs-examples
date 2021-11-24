@@ -12,8 +12,8 @@
         <h3>Code:</h3>
         <pre>
             <code>
-                interval(1000).pipe(
-                    take(11)
+                Observable$.pipe(
+                    takeUntil(isLoaded$)
                 )
             </code>
         </pre>
