@@ -1,13 +1,16 @@
 .nav-item {
-    margin: 0 6px;
+    margin: 0 4px;
     list-style-type: none;
     font-family: sans-serif;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .navbar-brand {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0;
     margin: 0;
-    padding: 0 10px;
     img {
         width: 100px;
         height: 70px;
@@ -18,4 +21,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.nav-content-wrapper {
+    display: inline-block;
+    padding: 22px 53px;
 }
