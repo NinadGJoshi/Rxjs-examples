@@ -74,3 +74,12 @@ typings/
 
 # FuseBox cache
 .fusebox/
+
+# firebase directory
+.firebase
+
+# dist folder
+dist
+
+# public folder
+public
