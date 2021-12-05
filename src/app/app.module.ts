@@ -22,6 +22,7 @@ import { IntervalExampleComponent } from './components/interval-example/interval
 import { CombineLatestComponent } from './components/combine-latest/combine-latest.component';
 import { TableOfContentsComponent } from './components/table-of-contents/table-of-contents.component';
 import { ForkjoinComponent } from './components/forkjoin/forkjoin.component';
+import { DynamicSeletionDirective } from './directives/dynamic-selection.directive';
 
 @NgModule({
   declarations: [
@@ -35,15 +36,16 @@ import { ForkjoinComponent } from './components/forkjoin/forkjoin.component';
     DucComponentComponent,
     TakeOperatorComponent,
     TakeUntilOperatorComponent,
-
-    TableStylingDirective,
-    DynamicColorChangeDirective,
     TimerComponent,
     SwitchmapOperatorComponent,
     IntervalExampleComponent,
     CombineLatestComponent,
     TableOfContentsComponent,
-    ForkjoinComponent
+    ForkjoinComponent,
+
+    TableStylingDirective,
+    DynamicColorChangeDirective,
+    DynamicSeletionDirective
   ],
   imports: [
     BrowserModule,

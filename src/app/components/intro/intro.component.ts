@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ContentChildren, OnInit, QueryList, TemplateRef, ViewChildren } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { distinctUntilChanged, shareReplay } from 'rxjs/operators';
+import { DynamicSeletionDirective } from 'src/app/directives/dynamic-selection.directive';
 
 @Component({
   selector: 'app-intro',
@@ -8,6 +9,9 @@ import { distinctUntilChanged, shareReplay } from 'rxjs/operators';
   styleUrls: ['./intro.component.scss']
 })
 export class IntroComponent implements OnInit {
+
+  public selectedSection: TemplateRef<any> | any;
+  @ViewChildren(DynamicSeletionDirective) templateRefs: QueryList<DynamicSeletionDirective> | any;
 
   public sectionIndex: number = 0;
   private loadResultSub?: BehaviorSubject<boolean>;
@@ -18,7 +22,12 @@ export class IntroComponent implements OnInit {
     this.loadResult$ = this.loadResultSub?.asObservable().pipe(distinctUntilChanged(),shareReplay(1));
   }
 
+  public getTemplate(templateId: number) {
+    return this.templateRefs.toArray().find((x:any) => x.id == templateId)?.template;
+  }
+
   public getSelection(index: number): void {
+    this.selectedSection = this.getTemplate(index);
     this.sectionIndex = index;
   }
 
@@ -42,5 +51,8 @@ export class IntroComponent implements OnInit {
   ngOnInit(): void {
     this.getResult();
   }
-
+  
+  ngAfterViewInit():void {
+    this.selectedSection = this.getTemplate(0);
+  }
 }
