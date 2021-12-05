@@ -1,9 +1,9 @@
 <div class="intro-wrapper">
     <div class="text-wrapper">
-        <div class="col-sm-12 col-md-3">
+        <div class="col-xs-12 col-sm-12 col-md-3">
             <table-of-contents (onSelectionChanged)="getSelection($event)"></table-of-contents>
         </div>
-        <div class="col-sm-12 col-md-9">
+        <div class="col-xs-12 col-sm-12 col-md-9">
             <ng-container *ngTemplateOutlet="selectedSection"></ng-container>
             <ng-template dynamic-selection [id]="0">
                 <section>

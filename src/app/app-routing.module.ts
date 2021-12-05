@@ -7,6 +7,7 @@ import { ForkjoinComponent } from './components/forkjoin/forkjoin.component';
 import { IntervalExampleComponent } from './components/interval-example/interval-example.component';
 import { IntroComponent } from './components/intro/intro.component';
 import { MapOperatorComponent } from './components/map-operator/map-operator.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { ReduceOperatorComponent } from './components/reduce-operator/reduce-operator.component';
 import { SwitchmapOperatorComponent } from './components/switchmap-operator/switchmap-operator.component';
 import { TakeOperatorComponent } from './components/take-operator/take-operator.component';
@@ -66,6 +67,10 @@ const routes: Routes = [
   {
     path: 'fork-join',
     component: ForkjoinComponent
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent
   }
 ];
 

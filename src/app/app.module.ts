@@ -7,6 +7,7 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { IntroComponent } from './components/intro/intro.component';
 import { MapOperatorComponent } from './components/map-operator/map-operator.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FilterOperatorComponent } from './components/filter-operator/filter-operator.component';
 import { ReduceOperatorComponent } from './components/reduce-operator/reduce-operator.component';
 import { TableStylingDirective } from './directives/table-styles.directive';
@@ -23,6 +24,7 @@ import { CombineLatestComponent } from './components/combine-latest/combine-late
 import { TableOfContentsComponent } from './components/table-of-contents/table-of-contents.component';
 import { ForkjoinComponent } from './components/forkjoin/forkjoin.component';
 import { DynamicSeletionDirective } from './directives/dynamic-selection.directive';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -42,16 +44,18 @@ import { DynamicSeletionDirective } from './directives/dynamic-selection.directi
     CombineLatestComponent,
     TableOfContentsComponent,
     ForkjoinComponent,
+    PageNotFoundComponent,
 
     TableStylingDirective,
     DynamicColorChangeDirective,
-    DynamicSeletionDirective
+    DynamicSeletionDirective,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

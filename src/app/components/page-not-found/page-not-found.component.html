@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div class="header">
+            <h2>It seems you've lost your way!</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="content-wrapper">
+            <div class="img-wrapper" [@scaleUpEffect]='currentState'>
+                <img src="../../../assets/images/page-not-found-img.jpg" alt="no data found image">
+            </div>
+            <div class="text-wrapper" [@scaleDownEffect]='currentState'>
+                <p class="lead">404</p>
+                <p>page not found!!</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="navigate">
+            <a [routerLink]="['/intro']">Go back to Introduction page</a>
+        </div>
+    </div>
+</div>

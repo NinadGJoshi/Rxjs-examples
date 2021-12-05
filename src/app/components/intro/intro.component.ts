@@ -1,4 +1,4 @@
-import { Component, ContentChildren, OnInit, QueryList, TemplateRef, ViewChildren } from '@angular/core';
+import { Component, OnInit, QueryList, TemplateRef, ViewChildren } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { distinctUntilChanged, shareReplay } from 'rxjs/operators';
 import { DynamicSeletionDirective } from 'src/app/directives/dynamic-selection.directive';
